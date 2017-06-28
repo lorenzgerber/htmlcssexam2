@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=eng>
+  <head>
+    <meta charset = "utf-8">
+    <title>Articles on Eclipse RCP</title>
+    <link rel="stylesheet" type="text/css", href="blog.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1> Lo's React Blog</h1>
+
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#">Eclipse RCP</a></li>
+      </ul>
+    </div>
+    <div class="intro eclipse">
+      <p>
+      Eclipse Rich Client Platform is a framework for developing desktop application
+      software. The Eclipse Integrated Development Environment is itself written with
+      this framework. The forthcoming entries are about development of a plugin for
+      the RCP program <span class="brandname">OpenChrom</span> which is used for
+      visualization of mass spectrometry data.</p>
+    </div>
+
+    <div class="article eclipse>">
+      <h2>Plugin Structure</h2>
+      The plugin under development, 'alignment' includes five project folders:
+      <ul>
+        <li>net.openchrom.chromatogram.xxd.process.supplier.alignment</li>
+        <li>net.openchrom.chromatotram.xxd.process.supplier.alignment.cbi</li>
+        <li>net.openchrom.chromatogram.xxd.process.supplier.alignment.feature</li>
+        <li>net.openchrom.chromatogram.xxd.process.supplier.alignment.fragment.test</li>
+        <li>net.openchrom.chromagotram.xxd.process.supplier.alignment.ui</li>
+      </ul>
+    </div>
+    <p>The actual functionality that the plugin shall provide can be found in the first
+    project folder, 'alignment'. In it's src folder, the packages 'alignment',
+    'alignment.core', 'alignment.model', 'alignment.preferences' and 'alignment.settings'
+    are contained. 'core' and 'model' contain the actual functonality.</p>
+
+    <p>The other project folder of interest ist 'alignment.ui' which contains in
+      it's source folder a number of packages that together host the code for the
+      graphical user interface. The entry-point, code-wise (altough mostly boiler
+      plate) is the 'Activator' class in 'alignment.ui' package.
+    </p>
+
+
+  </body>
+</html>

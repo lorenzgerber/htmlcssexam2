@@ -7,6 +7,11 @@ html{
   background-image: linear-gradient(top, #233, #FFF);
 }
 
+code {
+  font-family: monospace;
+  font-size: 20px;
+}
+
 body {
   width: 700px;
   margin: 0 auto;
@@ -19,13 +24,14 @@ body {
 
 .navigation {
   float: right;
-  margin: 0;
+  margin: 10;
   list-style: none;
 }
 
 .navigation li {
   float: left;
 }
+
 
 .navigation a {
   display: block;
