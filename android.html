@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=eng>
+  <head>
+    <meta charset = "utf-8">
+    <title>Articles on Android Development</title>
+    <link rel="stylesheet" type="text/css", href="blog.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1> Lo's React Blog</h1>
+
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#">Eclipse RCP</a></li>
+        <li><a href="#">Android</a></li>
+      </ul>
+    </div>
+    <div class="intro Android">
+      <p>
+      Some thoughts about Java development for Android.
+      </p>
+    </div>
+
+    <div class="article android">
+      <h2>Fragment Arguments</h2>
+      A number of operations or data flows are of interest:
+      <ul>
+        <li>Attach data when starting a new Fragment/Activity</li>
+        <li>Retrieving extra/data from Activity (lazy way)</li>
+        <li>Retrieving extra/data by attaching it to Fragment</li>
+        <li>Obtain results back from a Fragment</li>
+      </ul>
+
+
+    <p>First of all, to start a Fragment/Activity from a given
+    Fragment, for example OnClick, one uses the <code>new Intent()</code>.
+    Nothing further is needed as the new Activity itself includes the code
+    to start the Fragment. Code to provide the possibility of attaching an
+    Extras/data resides in the Activity file: A static method to construct
+    a new intent together with an <code>putExtra</code>. The static method
+    is then called for actually starting the new Activity/Fragment. Here
+    the Extra data is loaded.</p>
+
+    <p>To retrieve the Extra/data, in it's simplest form, it can be obtained
+    directly from the activity: <code> (typeCast) getActivity().getIntent().getSerializableExtra(ID)</p></code>.
+    This is however from a modularity point of view not a very elegant solution.</p>
+
+
+    <p>A nicer way is to attach the arguments to a Fragment. To do this, a
+    static method <code>newInstance()</code> is added to the Fragment class
+    to which the data shall be attached. This method takes as an argument
+    the data that shall be included into the Fragment Bundle. Here the
+    <code>createFragment</code> method in the calling Activity has to be
+    adapted to use the new static method. Finally, the arguments are
+    obtained in the Fragment by using the <code>getArguments().getSerializable(ID)</code>
+    method.</p>
+
+
+
+
+  </body>
+</html>
