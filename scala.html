@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=eng>
+  <head>
+    <meta charset = "utf-8">
+    <title>Articles on Android Development</title>
+    <link rel="stylesheet" type="text/css", href="blog.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1> Lo's React Blog</h1>
+
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#">Eclipse RCP</a></li>
+        <li><a href="#">Android</a></li>
+        <li><a href="#">Scala</a></li>
+      </ul>
+    </div>
+    <div class="intro Android">
+      <p>
+      Some notes on functional programming with Scala.
+      </p>
+    </div>
+
+    <div class="article scala">
+      <h2>Elements of Programming</h2>
+      There are three basic 'buidling blocks' in programming languages:
+      <ol>
+        <li>primitive expression, the simplest element</li>
+        <li>ways to combine expressions</li>
+        <li>'ways' to abstract expression (replacement names)</li>
+      </ol>
+
+      Compositions of such non-primitive compositions are evaluated in three
+      steps:
+      <ol>
+        <li>Take leftmost operator</li>
+        <li>Evaluate it's operands</li>
+        <li>Apply operator to operands</li>
+      </ol>
+
+      <p>Further, names are evaluated by replacing them with the right hand side
+      of it's definition. Evaluation terminates when it results in a value.
+      Definitions can have zero, one or several parameters and paramaters have 
+      a type. This is basically the definition of a function. A function can also
+      have a return type.</p>
+
+      Evaluation of Function Applications happens similar to operators in three
+      steps:
+      <ol>
+        <li>Evaluate function arguments from left to right</li>
+        <li>Replace function applications by the function's right-hand side</li>
+        <li>...at the same time, replace formal parameters of function by
+          actual arguments</li>
+      </ol>
+
+    </div>
+
+    <div>
+      <h2>The Substitution Model</h2>
+      The scheme how expressions are evaluated is called the substitution model.
+      It's application is simple as long as the expressions have no side effects.
+    </div>
+
+
+
+  </body>
+</html>
