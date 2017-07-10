@@ -24,7 +24,7 @@
       </p>
     </div>
 
-    <div class="article scala">
+    <div class="article scala coursera">
       <h2>Elements of Programming</h2>
       There are three basic 'buidling blocks' in programming languages:
       <ol>
@@ -63,6 +63,117 @@
       The scheme how expressions are evaluated is called the substitution model.
       It's application is simple as long as the expressions have no side effects.
     </div>
+
+    <div class="article scala horstmann">
+      <h2>Basics</h2>
+        <p>Defining variables in Scala is done either by <code>val</code> or
+          <code>var</code>. The latter can be reassigned during a program while
+          the former is the short form for 'value' and can not be reassigned.
+          There are seven numeric types: 'Byte', 'Char', 'Short', 'Int', 'Long',
+          'Float', and 'Double'. Further a 'Boolean' type. In Scala, these are
+          all classes. Scala uses the <code>java.lang.String</code> class but
+          extends it with the <code>StringOps</code> class that allows a multitude
+          of string operations out of the box.</p>
+
+          <p>in Scala, operators are in fact mehthods. A expression like <code>a + b</code>
+          translates in fact to <code>a.+(b)</code> where '+' is the name of the
+          method. Hence, as seen from this example, methods can also be written
+          with infix notation. Methods without parameters can be written without
+          parentheses, such as sorting a string: <code>"test".sorted</code>. As
+          a speciality from Functional Programming, many classes have an 'apply'
+          method that will start their execution. This is related to the notion
+          that in FP functions are 'first class citizens', hence function can also
+          be a class or an object. Still functions keep their property that they
+          can be combined and chained as usual in mathematics. Apply comes from
+          'applying the functions to it's arguments'.</p>
+    </div>
+
+    <div class="article scala horstmann">
+      <h2>Control Structures and Functions</h2>
+        <h3>Expressions vs Statements</h3>
+        <p>In Scala, most constructs are expression, in contrast to imperative
+          languages where there are expressions and statements. Expressions evaluate
+          to values while the aim of a statement is it's side effect. In scala,
+          <code>if</code> conditionals have a value, so do blocks. From the latter
+          follows that there is never a need for a return statement. The implicit
+          return will always be the evaluated value. If a block only contains
+          a statement such as a 'print' command, it will return the scala 'void'
+          type called <code>Unit</code>.</p>
+        <h3>For loops</h3>
+        <p><code>For</code> loops are basically data structure traversals using
+          the expression <code>for (i &lt- expr)</code>. A normal 0 to 9 loop
+          can for example be obtained by <code>for (i &lt- 0 to 9)</code>. The
+          '0 to 9' expression results in a 'Range' object. '&lt-' is the
+          traversal method.</p>
+        <h3>Variable numer of Arguments</h3>
+        <p>The syntax for 'varargs' is described in this chapter with the special
+          case when a sequence generating single argument has to be expanded for
+          application in a recursive call. A non recursive example is when
+          supplying the arg(s) <code>1.to(5)</code> to the funcntion that takes
+          varargs with the syntax <code>def sum(args: Int*) = {}</code>, the
+          argument has to be extended with <code>1.to(5):_*</code> to expand.</p>
+        <h3>Exception handling</h3>
+        <p> Scala has a similar 'Exception handling' like Java. There are
+          however no checked exceptions. Withing the catch statement, pattern
+          matching is used to choose the proper exception handling.</p>
+    </div>
+
+    <div class="article scala horstmann">
+      <h2>Arrays<h2>
+        <h3>Fixed and variable size</h3>
+        <p>Fixed size arrays in Scala map to the corresponding primitive type
+        scala arrays. Element access is by '()' instead of '[]'. For variable
+        length arrays, <code>ArrayBuffer</code> is used. The '++=' method adds
+        elements at the end of the ArrayBuffer. To add several values at once,
+        they can be added as an array: <code>b ++= Array(8, 13, 21)</code> where
+        b is an ArrayBuffer.
+        </p>
+        <h3>Array traversal</h3>
+        <p>Array traversal is done mostly by using the <code>for(i &lt- range)</code>
+        construct. Two common ways to construct a range are the 'to' and 'until'
+        methods of the Int class. The difference is that the 'until' excludes
+        the last value, hence 0 until 5 loops over i = {0, 1, 2, 3, 4}. There
+        exist also a 'to' method with an additional 'by' argument that allows
+        to define the stepsize. The default stepsize is 1, hence for a decreasing
+        range, a corresponding 'by' argument such as -1 has to be chosen. If the
+        index 'i' is not needed in the traversal, an array can also be traversed
+        directly by <code>for(elem &lt- a), similar to a Java Enhanced For.</p>
+
+        <h3>Transforming Arrays</h3>
+        <p>In Scala, 'For/Yield' loops, or 'For comprehensions' can be used to create
+        a new, transformed array. The example <code>val result = for(elem &lt- a)
+        yield 2 * elem</code> will construct a new array from array 'a' with all
+        elements multiplied by 2. A way to filter the origin array is by applying
+        so called 'guards' in the for construct: <code>for(elem &lt-a if elem % 2 == 0)
+        yield 2 * elem</code>. This could however also be achieved by the for
+        FP programming more common filter method:
+        <code> a.filter(_% 2 == 0).map(2*_)</code>.</p>
+
+        <h3>Common Algorithms</h3>
+        <p>A number of common algorithms are implemented on all numeric typs:
+          'sum', 'max', 'min', 'sorted'. The latter returns a new sorted data
+          structure. For generic datatypes, a comparison function can be supplied
+          by the 'sortWith()' method. Alternatively, the datatype has to implement
+          the 'Ordered' trait. Another common method for arrays is the 'mkstring'
+          that converts the array to string and it takes as argument a charcter
+          or string as the separator between the elements:
+          <code>a.mkString(" and ")</code>.</p>
+
+        <h3>Multidimensional Arrays<h3>
+          <p>To construct multidimensional arrays, one uses the '.ofdim'
+            method such as <code>val matrix = Array.ofDim[Double](3,4)</code>.
+            Access to elements is in Scala style with '()()' notation.</p>
+      </div>
+
+    </div class="article scala generic">
+      <h2>Placeholder syntax for anonymous Functions</h2>
+      <p>There is an elegant syntax to shorten anonymous functions in Scala. for
+      example when doing a <code>List(1,2,3,4,5).foreach(a =&gt print(a))</code>, this
+      can be shortened to <code>List(1,2,3,4,5).foreach(print(_))</code>. The
+      same is also possible when there is more than one parameter, for example
+      in <code>val sum = List(1,2,3,4,5).reduceLeft(_+_)</code>.</p>
+    </div>
+
 
 
 
