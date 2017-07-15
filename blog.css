@@ -1,10 +1,9 @@
 html{
-  height: 100%;
   background-color: #233;
   background-image: -moz-linear-gradient(top, #233, #FFF);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#233), to(#FFF));
-  -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#223333, EndColorStr=#FFFFFF)";
-  background-image: linear-gradient(top, #233, #FFF);
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#223333, EndColorStr=#FFFFFF)";
+  //background-image: linear-gradient(top, #233, #FFF);
 }
 
 code {
@@ -13,14 +12,23 @@ code {
 }
 
 body {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
-  padding: 29px;
+  padding: 0px;
   border: 1px solid #233;
   border-top: none;
   background: #FFF;
 }
 
+.header {
+  background-color: #966;
+}
+
+.intro {
+  background-color: #633;
+  float: left;
+  width: auto;
+}
 
 .navigation {
   float: right;
@@ -40,4 +48,14 @@ body {
   border: 1px solid #CCC;
   color: #233;
   text-decoration: none;
+}
+
+.article {
+  padding: 50px;
+}
+
+.scala {
+  background-image: url(IMG_Hamburg.jpg);
+
+  background-position: top right;
 }

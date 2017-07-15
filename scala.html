@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang=eng>
+
   <head>
     <meta charset = "utf-8">
-    <title>Articles on Android Development</title>
+    <title>Code Rants</title>
     <link rel="stylesheet" type="text/css", href="blog.css">
   </head>
+
   <body>
+
     <div class="header">
-      <h1> Lo's React Blog</h1>
+      <h1>Code Rants</h1>
 
       <ul class="navigation">
         <li><a href="#">Home</a></li>
@@ -17,7 +20,10 @@
         <li><a href="#">Android</a></li>
         <li><a href="#">Scala</a></li>
       </ul>
+
     </div>
+
+
     <div class="intro Scala">
       <p>
       Some notes on functional programming with Scala.
@@ -27,6 +33,7 @@
     <div class="article scala coursera">
       <h2>Elements of Programming</h2>
       There are three basic 'buidling blocks' in programming languages:
+
       <ol>
         <li>primitive expression, the simplest element</li>
         <li>ways to combine expressions</li>
@@ -58,10 +65,11 @@
 
     </div>
 
-    <div>
+    <div class="article scala coursera">
       <h2>The Substitution Model</h2>
       The scheme how expressions are evaluated is called the substitution model.
-      It's application is simple as long as the expressions have no side effects.
+      It's application is simple as long as the expressions have no side effects,
+      and that's the whole idea in functional programming.
     </div>
 
     <div class="article scala horstmann">
@@ -165,7 +173,7 @@
             Access to elements is in Scala style with '()()' notation.</p>
       </div>
 
-    </div class="article scala generic">
+    <div class="article scala generic">
       <h2>Placeholder syntax for anonymous Functions</h2>
       <p>There is an elegant syntax to shorten anonymous functions in Scala. for
       example when doing a <code>List(1,2,3,4,5).foreach(a =&gt print(a))</code>, this
