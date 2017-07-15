@@ -1,9 +1,5 @@
 html{
   background-color: #233;
-  background-image: -moz-linear-gradient(top, #233, #FFF);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#233), to(#FFF));
-  //-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#223333, EndColorStr=#FFFFFF)";
-  //background-image: linear-gradient(top, #233, #FFF);
 }
 
 code {
@@ -15,7 +11,7 @@ body {
   width: 800px;
   margin: 0 auto;
   padding: 0px;
-  border: 1px solid #233;
+  border: 1px solid #033;
   border-top: none;
   background: #FFF;
 }
@@ -51,11 +47,16 @@ body {
 }
 
 .article {
+  border: thin solid #fff;
   padding: 50px;
+
 }
 
 .scala {
-  background-image: url(IMG_Hamburg.jpg);
+  background: #CCC;
+  background-image: url(house.jpg);
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
 
-  background-position: top right;
+  letter-spacing: normal;
 }
