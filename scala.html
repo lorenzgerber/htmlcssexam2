@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang=eng>
 
-  <head>
-    <meta charset = "utf-8">
-    <title>Code Rants</title>
-    <link rel="stylesheet" type="text/css", href="blog.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Code Rants</title>
+  <link rel="stylesheet" type="text/css" , href="blog.css">
+</head>
 
-  <body>
+<body>
 
-    <div class="header">
-      <h1>Code Rants</h1>
+  <div class="header">
+    <h1>Code Rants</h1>
 
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">React</a></li>
-        <li><a href="#">Eclipse RCP</a></li>
-        <li><a href="#">Android</a></li>
-        <li><a href="#">Scala</a></li>
-      </ul>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Frameworks</a>
+        <ul>
+          <li><a href="#">React</a></li>
+          <li><a href="#">Eclipse RCP</a></li>
+          <li><a href="#">Android</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Languages</a>
+        <ul>
+          <li><a href="#">Scala</a></li>
+          <li><a href="#">HTML</a></li>
+        </ul>
+      </li>
+    </ul>
 
-    </div>
+  </div>
 
+  <div id="content">
 
     <div class="intro Scala">
       <p>
-      Some notes on functional programming with Scala.
+        Some notes on functional programming with Scala. Now the question is how this would work out if there would be much more text in this section. Would it still flow around the navigation feature? If there is enough text, maybe the actual box of the navigation
+        div would become visible. Currently, there is no 'clear' used after the float of the navigation. Currently, I don't fully understand yet when this will be useful.
       </p>
     </div>
 
-    <div class="article scala coursera">
-      <h2>Elements of Programming</h2>
-      There are three basic 'buidling blocks' in programming languages:
+    <div class="article scala coursera" id="elements">
+      <h2>Elements of Programming</h2> There are three basic 'buidling blocks' in programming languages:
 
       <ol>
         <li>primitive expression, the simplest element</li>
@@ -40,90 +51,54 @@
         <li>'ways' to abstract expression (replacement names)</li>
       </ol>
 
-      Compositions of such non-primitive compositions are evaluated in three
-      steps:
+      Compositions of such non-primitive compositions are evaluated in three steps:
       <ol>
         <li>Take leftmost operator</li>
         <li>Evaluate it's operands</li>
         <li>Apply operator to operands</li>
       </ol>
 
-      <p>Further, names are evaluated by replacing them with the right hand side
-      of it's definition. Evaluation terminates when it results in a value.
-      Definitions can have zero, one or several parameters and paramaters have
-      a type. This is basically the definition of a function. A function can also
-      have a return type.</p>
+      <p>Further, names are evaluated by replacing them with the right hand side of it's definition. Evaluation terminates when it results in a value. Definitions can have zero, one or several parameters and paramaters have a type. This is basically the
+        definition of a function. A function can also have a return type.</p>
 
-      Evaluation of Function Applications happens similar to operators in three
-      steps:
+      Evaluation of Function Applications happens similar to operators in three steps:
       <ol>
         <li>Evaluate function arguments from left to right</li>
         <li>Replace function applications by the function's right-hand side</li>
-        <li>...at the same time, replace formal parameters of function by
-          actual arguments</li>
+        <li>...at the same time, replace formal parameters of function by actual arguments</li>
       </ol>
 
     </div>
 
-    <div class="article scala coursera">
-      <h2>The Substitution Model</h2>
-      The scheme how expressions are evaluated is called the substitution model.
-      It's application is simple as long as the expressions have no side effects,
-      and that's the whole idea in functional programming.
+    <div class="article scala coursera" id="substitution">
+      <h2>The Substitution Model</h2> The scheme how expressions are evaluated is called the substitution model. It's application is simple as long as the expressions have no side effects, and that's the whole idea in functional programming.
     </div>
 
     <div class="article scala horstmann">
       <h2>Basics</h2>
-        <p>Defining variables in Scala is done either by <code>val</code> or
-          <code>var</code>. The latter can be reassigned during a program while
-          the former is the short form for 'value' and can not be reassigned.
-          There are seven numeric types: 'Byte', 'Char', 'Short', 'Int', 'Long',
-          'Float', and 'Double'. Further a 'Boolean' type. In Scala, these are
-          all classes. Scala uses the <code>java.lang.String</code> class but
-          extends it with the <code>StringOps</code> class that allows a multitude
-          of string operations out of the box.</p>
+      <p>Defining variables in Scala is done either by <code>val</code> or
+        <code>var</code>. The latter can be reassigned during a program while the former is the short form for 'value' and can not be reassigned. There are seven numeric types: 'Byte', 'Char', 'Short', 'Int', 'Long', 'Float', and 'Double'. Further a 'Boolean'
+        type. In Scala, these are all classes. Scala uses the <code>java.lang.String</code> class but extends it with the <code>StringOps</code> class that allows a multitude of string operations out of the box.</p>
 
-          <p>in Scala, operators are in fact mehthods. A expression like <code>a + b</code>
-          translates in fact to <code>a.+(b)</code> where '+' is the name of the
-          method. Hence, as seen from this example, methods can also be written
-          with infix notation. Methods without parameters can be written without
-          parentheses, such as sorting a string: <code>"test".sorted</code>. As
-          a speciality from Functional Programming, many classes have an 'apply'
-          method that will start their execution. This is related to the notion
-          that in FP functions are 'first class citizens', hence function can also
-          be a class or an object. Still functions keep their property that they
-          can be combined and chained as usual in mathematics. Apply comes from
-          'applying the functions to it's arguments'.</p>
+      <p>in Scala, operators are in fact mehthods. A expression like <code>a + b</code> translates in fact to <code>a.+(b)</code> where '+' is the name of the method. Hence, as seen from this example, methods can also be written with infix notation. Methods
+        without parameters can be written without parentheses, such as sorting a string: <code>"test".sorted</code>. As a speciality from Functional Programming, many classes have an 'apply' method that will start their execution. This is related to the
+        notion that in FP functions are 'first class citizens', hence function can also be a class or an object. Still functions keep their property that they can be combined and chained as usual in mathematics. Apply comes from 'applying the functions
+        to it's arguments'.</p>
     </div>
 
     <div class="article scala horstmann">
       <h2>Control Structures and Functions</h2>
-        <h3>Expressions vs Statements</h3>
-        <p>In Scala, most constructs are expression, in contrast to imperative
-          languages where there are expressions and statements. Expressions evaluate
-          to values while the aim of a statement is it's side effect. In scala,
-          <code>if</code> conditionals have a value, so do blocks. From the latter
-          follows that there is never a need for a return statement. The implicit
-          return will always be the evaluated value. If a block only contains
-          a statement such as a 'print' command, it will return the scala 'void'
-          type called <code>Unit</code>.</p>
-        <h3>For loops</h3>
-        <p><code>For</code> loops are basically data structure traversals using
-          the expression <code>for (i &lt- expr)</code>. A normal 0 to 9 loop
-          can for example be obtained by <code>for (i &lt- 0 to 9)</code>. The
-          '0 to 9' expression results in a 'Range' object. '&lt-' is the
-          traversal method.</p>
-        <h3>Variable numer of Arguments</h3>
-        <p>The syntax for 'varargs' is described in this chapter with the special
-          case when a sequence generating single argument has to be expanded for
-          application in a recursive call. A non recursive example is when
-          supplying the arg(s) <code>1.to(5)</code> to the funcntion that takes
-          varargs with the syntax <code>def sum(args: Int*) = {}</code>, the
-          argument has to be extended with <code>1.to(5):_*</code> to expand.</p>
-        <h3>Exception handling</h3>
-        <p> Scala has a similar 'Exception handling' like Java. There are
-          however no checked exceptions. Withing the catch statement, pattern
-          matching is used to choose the proper exception handling.</p>
+      <h3>Expressions vs Statements</h3>
+      <p>In Scala, most constructs are expression, in contrast to imperative languages where there are expressions and statements. Expressions evaluate to values while the aim of a statement is it's side effect. In scala,
+        <code>if</code> conditionals have a value, so do blocks. From the latter follows that there is never a need for a return statement. The implicit return will always be the evaluated value. If a block only contains a statement such as a 'print'
+        command, it will return the scala 'void' type called <code>Unit</code>.</p>
+      <h3>For loops</h3>
+      <p><code>For</code> loops are basically data structure traversals using the expression <code>for (i &lt- expr)</code>. A normal 0 to 9 loop can for example be obtained by <code>for (i &lt- 0 to 9)</code>. The '0 to 9' expression results in a 'Range'
+        object. '&lt-' is the traversal method.</p>
+      <h3>Variable numer of Arguments</h3>
+      <p>The syntax for 'varargs' is described in this chapter with the special case when a sequence generating single argument has to be expanded for application in a recursive call. A non recursive example is when supplying the arg(s) <code>1.to(5)</code>        to the funcntion that takes varargs with the syntax <code>def sum(args: Int*) = {}</code>, the argument has to be extended with <code>1.to(5):_*</code> to expand.</p>
+      <h3>Exception handling</h3>
+      <p> Scala has a similar 'Exception handling' like Java. There are however no checked exceptions. Withing the catch statement, pattern matching is used to choose the proper exception handling.</p>
     </div>
 
     <div class="article scala horstmann">
@@ -175,15 +150,16 @@
 
     <div class="article scala generic">
       <h2>Placeholder syntax for anonymous Functions</h2>
-      <p>There is an elegant syntax to shorten anonymous functions in Scala. for
-      example when doing a <code>List(1,2,3,4,5).foreach(a =&gt print(a))</code>, this
-      can be shortened to <code>List(1,2,3,4,5).foreach(print(_))</code>. The
-      same is also possible when there is more than one parameter, for example
-      in <code>val sum = List(1,2,3,4,5).reduceLeft(_+_)</code>.</p>
+      <p>There is an elegant syntax to shorten anonymous functions in Scala. for example when doing a <code>List(1,2,3,4,5).foreach(a =&gt print(a))</code>, this can be shortened to <code>List(1,2,3,4,5).foreach(print(_))</code>. The same is also possible
+        when there is more than one parameter, for example in <code>val sum = List(1,2,3,4,5).reduceLeft(_+_)</code>.</p>
     </div>
 
 
+  </div>
 
 
-  </body>
+
+
+</body>
+
 </html>
