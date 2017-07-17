@@ -14,7 +14,9 @@ body {
 }
 
 .header {
-  padding: 0;
+  position: fixed;
+  padding: 1em;
+  z-index: 3;
   border: none;
   background-color: #966;
 }
@@ -22,7 +24,7 @@ body {
 .header h1 {
   font-size: 4em;
   float: left;
-  margin-top: 0;
+  margin-top: 0.2em;
 }
 
 .navigation {
@@ -30,35 +32,24 @@ body {
   font-size: 1.8em;
 }
 
-
-
 .navigation a {
-  margin-left: 0.5em;
-  padding: 0.5em;
+  margin-left: 0;
+  padding: 0.2em;
   border: 1px solid #CCC;
   color: #fff;
   text-decoration: none;
   background-color: black;
 }
 
-.navigation ul {
-  position: absolute;
-  top: 2em;
-  right: 0;
-  width: 8em;
-  padding: 0;
-}
-
 .navigation li {
-  position: relative;
+  list-style: none;
   display: inline;
 }
 
-.navigation ul a{
-  display: block;
-}
 
 .intro {
+  float: left;
+  max-width: 800px;
   font-size: 1.8em;
   background-color: #633;
   clear: both;
@@ -70,4 +61,11 @@ body {
   height: 200px;
   overflow: auto;
   border-top: 10px solid #004949;
+}
+
+#content {
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  max-width: 800px;
 }
