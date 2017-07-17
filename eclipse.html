@@ -20,14 +20,15 @@
       <p>
       Eclipse Rich Client Platform is a framework for developing desktop application
       software. The Eclipse Integrated Development Environment is itself written with
-      this framework. The forthcoming entries are about development of a plugin for
+      this framework. The forthcoming entries are about development of a 'feature' for
       the RCP program <span class="brandname">OpenChrom</span> which is used for
       visualization of mass spectrometry data.</p>
     </div>
 
     <div class="article eclipse>">
-      <h2>Plugin Structure</h2>
-      The plugin under development, 'alignment' includes five project folders:
+      <h2>Feature Structure</h2>
+      The Feature under development, 'alignment' includes five plugins, which in
+      eclipse are represented as project folders:
       <ul>
         <li>net.openchrom.chromatogram.xxd.process.supplier.alignment</li>
         <li>net.openchrom.chromatotram.xxd.process.supplier.alignment.cbi</li>
@@ -36,15 +37,16 @@
         <li>net.openchrom.chromagotram.xxd.process.supplier.alignment.ui</li>
       </ul>
     </div>
-    <p>The actual functionality that the plugin shall provide can be found in the first
-    project folder, 'alignment'. In it's src folder, the packages 'alignment',
+    <p>The actual functionality that the feature shall provide can be found in the first
+    plugin 'alignment'. In it's 'src' folder, the packages 'alignment',
     'alignment.core', 'alignment.model', 'alignment.preferences' and 'alignment.settings'
     are contained. 'core' and 'model' contain the actual functonality.</p>
 
-    <p>The other project folder of interest ist 'alignment.ui' which contains in
+    <p>The other plugin of interest is 'alignment.ui' which contains in
       it's source folder a number of packages that together host the code for the
-      graphical user interface. The entry-point, code-wise (altough mostly boiler
-      plate) is the 'Activator' class in 'alignment.ui' package.
+      graphical user interface. The entry point for the GUI part of the plugin
+      in question can be found in the 'alignment.ui' plugin and more specific 
+      in the 'alignment.ui.editors' package. The 'EditorAlignment' class
     </p>
 
 
