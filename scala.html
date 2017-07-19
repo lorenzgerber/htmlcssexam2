@@ -5,28 +5,45 @@
   <title>Code Rants</title>
   <link rel="stylesheet" type="text/css" , href="dblog.css">
   <style type="text/css">
+
+
   body {
     width: 800px;
-    margin: 0 auto;
+    margin: 1em auto;
   }
 
   h1 {
     text-align: center;
   }
 
-  .main_menu {
+
+
+
+  #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  #inner_header {
+    width: 800px;
+  }
+
+  #main_menu {
     text-align: center;
   }
 
-  .navigation ul {
-    list-style: none;
+  #navigation ul {
+    list-style-type: none;
   }
 
-  .navigation li {
+  #navigation li {
     display: inline;
   }
 
-  .navigation a {
+  #navigation a {
     margin-left: 0.5em;
     padding: 0.5em;
     border: 1px solid #CCC;
@@ -34,15 +51,23 @@
     text-decoration: none;
   }
 
-  .topics {
+  #intro {
+    position: relative;
     margin: 0 auto;
-    float: right;
+    max-width: 800px;
+
+  }
+
+  #topics {
+    position: absolute;
+    right: 0px;
     padding: 10px;
     width: 280px;
     background-color: blue;
   }
 
-  .blog {
+
+  #blog {
     margin: 0 auto;
     float: left;
     width: 500px;
@@ -57,30 +82,26 @@
 
 <body>
 
-  <div class="header">
+  <div id="header">
     <h1>Code Rants</h1>
 
-    <div class="main_menu">
-    <ul class="navigation">
+    <div id="main_menu">
+    <ul id="navigation">
       <li><a href="#">Scala</a></li>
       <li><a href="#">Eclipse RCP</a></li>
       <li><a href="#">Android</a></li>
     </ul>
   </div>
 
-    <div class="intro">
+    <div id="intro">
       <p>
       This page contains some notes on functional programming with Scala. They
       come from my own personal experience during the process of learning Scala,
       hence they could (will most certainly...) contain factual errors.
       </p>
-    </div>
-  </div>
 
 
-
-
-    <div class="topics"
+    <div id="topics"
     <ul>
       <li><a href="#">Building blocks</a></li>
       <li><a href="#">Evaluation non-primitve compositions</a></li>
@@ -100,11 +121,18 @@
       <li><a href="#">Placeholder anonymous functions</a></li>
     </ul>
   </div>
+</div>
+</div>
 
 
 
 
-<div class="blog">
+
+
+
+
+
+<div id="blog">
   <div class="post">
     <h3>Basic Building Blocks in Programming Lanugages</h3>
     <p>There are three basic 'buidling blocks' in programming languages:</p>
