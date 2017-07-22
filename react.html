@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang=eng>
-  <head>
-    <meta charset = "utf-8">
-    <title>Lo's React Blog</title>
-    <link rel="stylesheet" type="text/css" href="blog.css">
-  </head>
-  <body>
-    <div class="header">
-      <h1> Lo's React Blog</h1>
 
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">React</a></li>
-        <li><a href="#">Eclipse RCP</a></li>
+<head>
+  <meta charset="utf-8">
+  <title>Code Rants</title>
+  <link rel="stylesheet" type="text/css" , href="blog.css">
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Code Rants</h1>
+
+    <div id="main_menu">
+      <ul id="navigation">
+        <li><a href="index.html">About</a></li>
+        <li><a href="scala.html">Scala</a></li>
+        <li><a href="eclipse.html">Eclipse RCP</a></li>
+        <li><a href="android.html">Android</a></li>
+        <li><a href="react.html">React</a></li>
       </ul>
     </div>
-    <div class="intro react">
-      <p>
-        React is a JavaScript Library for building
-        front-ends of single page web applications.</p>
-    </div>
 
-    <div class="article react">
+    <div id="intro_topics_container">
+
+      <div id="intro">
+        <p>React is a JavaScript Library for building front-ends of single page
+          web applications. This page is used for taking notes while learning
+          the framework. The base litterature for gettin ginto is a O'Reilly book
+          called 'Learning React'.</p>
+      </div>
+
+      <div id="topics">
+        <h2>Topics</h2>
+        <ul>
+          <li><a href="#what_is_react">What is React</a></li>
+          <li><a href="#getting_started">Getting started</a></li>
+          <li><a href="#tools_and_packages">Some Tools and Packages</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+<div id="blog">
+  <a name="top_of_blog" class="shifted-anchor-return"></a>
+    <div class="post">
+      <a name="what_is_react" class="shifted-anchor-post"></a>
       <h2>What is React?</h2>
       <p> React is a JavaScript library that was origninally created by
         engineers at Facebook. As a pure front-end library, it can be used
@@ -31,10 +56,12 @@
         I got into learning React during a University project where it was
         decided that the front-end of client-server application should be built
         in React.</p>
+        <a href="#top_of_blog">Back to Top</a>
     </div>
 
-    <div class="article react">
-      <h2>Getting Started with React</h2>
+    <div class="post">
+      <a name="getting_started" class="shifted-anchor-post"></a>
+      <h3>Getting Started with React</h3>
       <p>To start using React there are a couple of entry points. The first
         thing to do would be to install node, as react is conveniently distributed
         by the node package manager 'npm'.
@@ -53,16 +80,20 @@
         in general and so on.
         I often choose to go for a book as I prefer to use it later on as a
         source of reference.</p>
+        <a href="#top_of_blog">Back to Top</a>
       </div>
 
-      <div class="article react">
-        <h2>Some Tools and Packages</h2>
+      <div class="post">
+        <a name="tools_and_packages" class="shifted-anchor-post"></a>
+        <h3>Some Tools and Packages</h3>
         <p>When jumping into React without a lot of prior exposure to JavaScript
           and Node.js, there will be quite a number of concepts to grasp and tools
           to learn. Many of them just work nicely in the background without any
           need for interaction. Here follows a short list of tools with a short
           description of what they do or are used for:
         </p>
+        <a href="#top_of_blog">Back to Top</a>
       </div>
+    </div>
   </body>
-</html>
+  </html>

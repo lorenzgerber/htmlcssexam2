@@ -33,8 +33,11 @@
         <li>Obtain results back from a Fragment</li>
       </ul>
 
+    </div>
 
-    <p>First of all, to start a Fragment/Activity from a given
+    <div class="article android">
+      <h3>Starting a new Fragment</h3>
+      <p>First of all, to start a Fragment/Activity from a given
     Fragment, for example OnClick, one uses the <code>new Intent()</code>.
     Nothing further is needed as the new Activity itself includes the code
     to start the Fragment. Code to provide the possibility of attaching an
@@ -43,22 +46,24 @@
     is then called for actually starting the new Activity/Fragment. Here
     the Extra data is loaded.</p>
 
-    <p>To retrieve the Extra/data, in it's simplest form, it can be obtained
+
+    <div class="article android">
+      <h3>Obtain extra data - simple way</h3>
+      <p>To retrieve the Extra/data, in it's simplest form, it can be obtained
     directly from the activity: <code> (typeCast) getActivity().getIntent().getSerializableExtra(ID)</p></code>.
     This is however from a modularity point of view not a very elegant solution.</p>
+  </div>
 
-
-    <p>A nicer way is to attach the arguments to a Fragment. To do this, a
-    static method <code>newInstance()</code> is added to the Fragment class
-    to which the data shall be attached. This method takes as an argument
-    the data that shall be included into the Fragment Bundle. Here the
-    <code>createFragment</code> method in the calling Activity has to be
-    adapted to use the new static method. Finally, the arguments are
-    obtained in the Fragment by using the <code>getArguments().getSerializable(ID)</code>
-    method.</p>
-
-
-
+  <div class="article android">
+    <h3>Obtain extra data - the proper way</h3>
+    <p>A nicer way of accessing the data is to attach the arguments to a Fragment.
+      To do this, a static method <code>newInstance()</code> is added to the Fragment
+      class to which the data shall be attached. This method takes as an argument the
+      data that shall be included into the Fragment Bundle. Here the
+      <code>createFragment</code> method in the calling Activity has to be adapted to
+      use the new static method. Finally, the arguments are obtained in the Fragment
+      by using the <code>getArguments().getSerializable(ID)</code> method.</p>
+  </div>
 
   </body>
 </html>
