@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang=eng>
-  <head>
-    <meta charset = "utf-8">
-    <title>Articles on Eclipse RCP</title>
-    <link rel="stylesheet" type="text/css", href="blog.css">
-  </head>
-  <body>
-    <div class="header">
-      <h1> Lo's React Blog</h1>
 
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">React</a></li>
-        <li><a href="#">Eclipse RCP</a></li>
+<head>
+  <meta charset="utf-8">
+  <title>Code Rants</title>
+  <link rel="stylesheet" type="text/css" , href="blog.css">
+</head>
+
+<body>
+
+  <div id="header">
+    <h1><a href="index.html">Code Rants</a></h1>
+    <div id="main_menu">
+      <ul id="navigation">
+        <li><a href="scala.html">Scala</a></li>
+        <li><a href="eclipse.html">Eclipse RCP</a></li>
+        <li><a href="android.html">Android</a></li>
+        <li><a href="react.html">React</a></li>
       </ul>
     </div>
-    <div class="intro eclipse">
-      <p>
-      Eclipse Rich Client Platform is a framework for developing desktop application
-      software. The Eclipse Integrated Development Environment is itself written with
-      this framework. The forthcoming entries are about development of a 'feature' for
-      the RCP program <span class="brandname">OpenChrom</span> which is used for
-      visualization of mass spectrometry data.</p>
-    </div>
 
-    <div class="article eclipse>">
-      <h2>Feature Structure</h2>
-      The Feature under development, 'alignment' includes five plugins, which in
-      eclipse are represented as project folders:
+    <div id="intro_topics_container">
+
+      <div id="intro">
+        <p>Eclipse Rich Client Platform is a framework for developing desktop application
+        software. The Eclipse Integrated Development Environment is itself written with
+        this framework. The forthcoming entries are about development of a 'feature' for
+        the RCP program <span class="brandname">OpenChrom</span> which is used for
+        visualization of mass spectrometry data.</p>
+      </div>
+
+      <div id="topics">
+        <h2>Topics</h2>
+        <ul>
+          <li><a href="#feature_structure">Feature Sctructure</a></li>
+          <li><a href="#core_functionality">Core Functionality</a></li>
+          <li><a href="#ui_functionality">UI Functionality</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog">
+    <a name="top_of_blog" class="shifted-anchor-return"></a>
+    <div class="post">
+      <a name="building_blocks" class="shifted-anchor-post"></a>
+      <h3>Feature Structure</h3>
+      <p>The Feature under development, 'alignment' includes five plugins, which in
+      eclipse are represented as project folders:</p>
       <ul>
         <li>net.openchrom.chromatogram.xxd.process.supplier.alignment</li>
         <li>net.openchrom.chromatotram.xxd.process.supplier.alignment.cbi</li>
@@ -36,19 +55,28 @@
         <li>net.openchrom.chromatogram.xxd.process.supplier.alignment.fragment.test</li>
         <li>net.openchrom.chromagotram.xxd.process.supplier.alignment.ui</li>
       </ul>
+      <a href="#top_of_blog">Back to Top</a>
     </div>
+
+    <div class="post">
+      <a name="core_functionality" class="shifted-anchor-post"></a>
+      <h3>Core Functionality</h3>
     <p>The actual functionality that the feature shall provide can be found in the first
     plugin 'alignment'. In it's 'src' folder, the packages 'alignment',
     'alignment.core', 'alignment.model', 'alignment.preferences' and 'alignment.settings'
     are contained. 'core' and 'model' contain the actual functonality.</p>
+    <a href="#top_of_blog">Back to Top</a>
+  </div>
 
+  <div class="post">
+    <a name="ui_functionality" class="shifted-anchor-post"></a>
+    <h3>UI Functionality</h3>
     <p>The other plugin of interest is 'alignment.ui' which contains in
-      it's source folder a number of packages that together host the code for the
-      graphical user interface. The entry point for the GUI part of the plugin
-      in question can be found in the 'alignment.ui' plugin and more specific
-      in the 'alignment.ui.editors' package. The 'EditorAlignment' class
-    </p>
-
-
+    it's source folder a number of packages that together host the code for the
+    graphical user interface. The entry point for the GUI part of the plugin
+    in question can be found in the 'alignment.ui' plugin and more specific
+    in the 'alignment.ui.editors' package.</p>
+    <a href="#top_of_blog">Back to Top</a>
+  </div>
   </body>
 </html>

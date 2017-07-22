@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang=eng>
-  <head>
-    <meta charset = "utf-8">
-    <title>Articles on Android Development</title>
-    <link rel="stylesheet" type="text/css", href="blog.css">
-  </head>
-  <body>
-    <div class="header">
-      <h1> Lo's React Blog</h1>
 
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">React</a></li>
-        <li><a href="#">Eclipse RCP</a></li>
-        <li><a href="#">Android</a></li>
+<head>
+  <meta charset="utf-8">
+  <title>Code Rants</title>
+  <link rel="stylesheet" type="text/css" , href="blog.css">
+</head>
+
+<body>
+
+  <div id="header">
+    <h1><a href="index.html">Code Rants</a></h1>
+
+    <div id="main_menu">
+      <ul id="navigation">
+        <li><a href="scala.html">Scala</a></li>
+        <li><a href="eclipse.html">Eclipse RCP</a></li>
+        <li><a href="android.html">Android</a></li>
+        <li><a href="react.html">React</a></li>
       </ul>
     </div>
-    <div class="intro Android">
-      <p>
-      Some thoughts about Java development for Android.
-      </p>
-    </div>
 
-    <div class="article android">
-      <h2>Fragment Arguments</h2>
-      A number of operations or data flows are of interest:
+    <div id="intro_topics_container">
+
+      <div id="intro">
+        <p>
+        Some thoughts about Java development for Android. The notes where taken during
+        a distance course from Umeå Univesity using the book: 'Android Programming,
+        The Big Nerd Ranch Guide'. The course expected students to be somewhat current
+        in Java and Object-Oriented programming. The main focus was on learning
+        Android as a Mobile Framework.
+        </p>
+      </div>
+
+      <div id="topics">
+        <h2>Topics</h2>
+
+        <ul>
+          <li><a href="#fragment_arguments">Fragment Arguments</a></li>
+          <li><a href="#starting_new_fragment">Starting a new Fragment</a></li>
+          <li><a href="#obtain_extra_simple">Obtain Extra Data - Simple Way</a></li>
+          <li><a href="#obtain_extra_proper">Obtaining Extra Data - Proper Way</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="blog">
+    <a name="top_of_blog" class="shifted-anchor-return"></a>
+    <div class="post">
+      <a name="fragment_arguments" class="shifted-anchor-post"></a>
+      <h3>Fragment Arguments</h3>
+      <p>A number of operations or data flows are of interest:</p>
       <ul>
         <li>Attach data when starting a new Fragment/Activity</li>
         <li>Retrieving extra/data from Activity (lazy way)</li>
         <li>Retrieving extra/data by attaching it to Fragment</li>
         <li>Obtain results back from a Fragment</li>
       </ul>
-
+      <a href="#top_of_blog">Back to Top</a>
     </div>
 
-    <div class="article android">
+    <div class="post">
+      <a name="starting_new_fragment" class="shifted-anchor-post"></a>
       <h3>Starting a new Fragment</h3>
       <p>First of all, to start a Fragment/Activity from a given
     Fragment, for example OnClick, one uses the <code>new Intent()</code>.
@@ -45,16 +72,21 @@
     a new intent together with an <code>putExtra</code>. The static method
     is then called for actually starting the new Activity/Fragment. Here
     the Extra data is loaded.</p>
+    <a href="#top_of_blog">Back to Top</a>
+  </div>
 
 
-    <div class="article android">
+    <div class="post">
+      <a name="obtain_extra_simple" class="shifted-anchor-post"></a>
       <h3>Obtain extra data - simple way</h3>
       <p>To retrieve the Extra/data, in it's simplest form, it can be obtained
     directly from the activity: <code> (typeCast) getActivity().getIntent().getSerializableExtra(ID)</p></code>.
     This is however from a modularity point of view not a very elegant solution.</p>
+    <a href="#top_of_blog">Back to Top</a>
   </div>
 
-  <div class="article android">
+  <div class="post">
+    <a name="obtain_extra_proper" class="shifted-anchor-post"></a>
     <h3>Obtain extra data - the proper way</h3>
     <p>A nicer way of accessing the data is to attach the arguments to a Fragment.
       To do this, a static method <code>newInstance()</code> is added to the Fragment
@@ -63,7 +95,7 @@
       <code>createFragment</code> method in the calling Activity has to be adapted to
       use the new static method. Finally, the arguments are obtained in the Fragment
       by using the <code>getArguments().getSerializable(ID)</code> method.</p>
+      <a href="#top_of_blog">Back to Top</a>
   </div>
-
   </body>
 </html>
